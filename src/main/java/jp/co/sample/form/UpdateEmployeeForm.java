@@ -1,5 +1,10 @@
 package jp.co.sample.form;
 
+/**
+ * 従業員情報更新用のフォーム
+ * @author junpei.azuma
+ *
+ */
 public class UpdateEmployeeForm {
 	private String id;
 	private String dependentsCount;

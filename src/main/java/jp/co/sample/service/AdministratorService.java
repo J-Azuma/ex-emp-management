@@ -28,7 +28,9 @@ public class AdministratorService {
 		administratorRepository.insert(administrator);
 	}
 
-	/** ログイン処理をする
+	/** 
+	 * ログイン処理をする.
+	 * 
 	 * @param mailAddress メールアドレス
 	 * @param password パスワード
 	 * @return Administrator 管理者情報

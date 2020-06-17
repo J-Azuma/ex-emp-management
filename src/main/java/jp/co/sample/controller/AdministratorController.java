@@ -14,7 +14,8 @@ import jp.co.sample.form.InsertAdministratorForm;
 import jp.co.sample.form.LoginForm;
 import jp.co.sample.service.AdministratorService;
 
-/**管理者登録処理をおこなう.
+/**
+ * 管理者情報の操作を行うコントローラ.
  * 
  * @author junpei.azuma
  * 
@@ -71,9 +72,10 @@ public class AdministratorController {
 		
 	}
 	
-	/** ログイン画面を表示する.
+	/** 
+	 * ログイン画面を表示する.
 	 * 
-	 * @return String ログイン画面のパス
+	 * @return ログイン画面
 	 * 
 	 */
 	@RequestMapping("/")
@@ -81,7 +83,9 @@ public class AdministratorController {
 		return "administrator/login";
 	}
 	
-	/** ログイン処理を行う
+	/** 
+	 * ログイン処理を行う.
+	 * 
 	 * @param form ログイン用フォーム
 	 * @param model リクエストスコープにデータを渡すためのオブジェクト
 	 * @return 成功時：従業員一覧 失敗時: ログイン画面に戻る
