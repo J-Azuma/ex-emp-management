@@ -3,11 +3,10 @@ package jp.co.sample.domain;
 import java.util.Date;
 
 /**
- * @author junpei.azuma
- * 従業員情報を保持するクラス
+ * @author junpei.azuma 従業員情報を保持するクラス
  */
 public class Employee {
-	//id
+	// id
 	private Integer id;
 	// 名前
 	private String name;
@@ -25,7 +24,7 @@ public class Employee {
 	private String address;
 	// 電話番号
 	private String telephone;
-	//給与
+	// 給与
 	private Integer salary;
 	// 特性
 	private String characteristics;
@@ -33,6 +32,24 @@ public class Employee {
 	private Integer dependentsCount;
 
 	public Employee() {
+	}
+
+	public Employee(Integer id, String name, String image, String gender, Date hireDate, String mailAddress,
+			String zipCode, String address, String telephone, Integer salary, String characteristics,
+			Integer dependentsCount) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.image = image;
+		this.gender = gender;
+		this.hireDate = hireDate;
+		this.mailAddress = mailAddress;
+		this.zipCode = zipCode;
+		this.address = address;
+		this.telephone = telephone;
+		this.salary = salary;
+		this.characteristics = characteristics;
+		this.dependentsCount = dependentsCount;
 	}
 
 	public Integer getId() {

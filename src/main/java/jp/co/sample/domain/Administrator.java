@@ -10,10 +10,20 @@ public class Administrator {
 	private Integer id;
 	/** 名前 */
 	private String name;
+	/** メールアドレス*/
 	private String mailAddress;
+	/** パスワード */
 	private String password;
 
 	public Administrator() {
+	}
+
+	public Administrator(Integer id, String name, String mailAddress, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mailAddress = mailAddress;
+		this.password = password;
 	}
 
 	public Integer getId() {
