@@ -81,6 +81,11 @@ public class AdministratorController {
 		return "administrator/login";
 	}
 	
+	/** ログイン処理を行う
+	 * @param form ログイン用フォーム
+	 * @param model リクエストスコープにデータを渡すためのオブジェクト
+	 * @return 成功時：従業員一覧 失敗時: ログイン画面に戻る
+	 */
 	@RequestMapping("/login")
 	public String login(LoginForm form, Model model) {
 		Administrator admin = administratorService.login(form.getMailAddress(), form.getPassword());
