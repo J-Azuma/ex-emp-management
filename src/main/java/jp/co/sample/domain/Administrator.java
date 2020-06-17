@@ -1,17 +1,19 @@
 package jp.co.sample.domain;
 
 /**
+ * 管理者情報を保持するクラス.
+ * 
  * @author junpei.azuma
- * 管理者情報を保持するクラス
  */
 public class Administrator {
+	/** ID */
 	private Integer id;
+	/** 名前 */
 	private String name;
 	private String mailAddress;
 	private String password;
 
 	public Administrator() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getId() {

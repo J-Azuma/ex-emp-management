@@ -1,8 +1,8 @@
 package jp.co.sample.form;
 
-/**
+/** 管理者情報登録時に使用するフォーム.
  * @author junpei.azuma
- * 管理者情報登録時に使用するフォーム
+ * 
  */
 public class InsertAdministratorForm {
 	private String name;

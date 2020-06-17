@@ -11,9 +11,10 @@ import jp.co.sample.form.InsertAdministratorForm;
 import jp.co.sample.form.LoginForm;
 import jp.co.sample.service.AdministratorService;
 
-/**
+/**管理者登録処理をおこなう.
+ * 
  * @author junpei.azuma
- * 管理者登録画面を表示する処理を書く
+ * 
  */
 @Controller
 @RequestMapping("/")
@@ -39,19 +40,21 @@ public class AdministratorController {
 	}
 	
 	/**
-	 * @return
-	 * 管理者登録画面を表示する
+	 * 管理者登録画面を表示する.
+	 * 
+	 * @return 管理者登録画面
 	 */
 	@RequestMapping("/toInsert")
 	public String toInsert() {
 		return "administrator/insert.html";
 	}
 	
-	/**
-	 * @param form
-	 * @return String
-	 * 管理者情報を登録する
-	 * 現段階ではリダイレクト後に404が出ます
+	/** 管理者情報を登録する.
+	 * 現段階ではリダイレクト後に404が出ます.
+	 * 
+	 * @param form 管理者登録フォームのオブジェクト
+	 * @return String 管理者登録画面のパス
+	 * 
 	 */
 	@RequestMapping("/insert")
 	public String insert(InsertAdministratorForm form) {
@@ -62,9 +65,10 @@ public class AdministratorController {
 		
 	}
 	
-	/**
-	 * @return
-	 * ログイン画面を表示する
+	/** ログイン画面を表示する.
+	 * 
+	 * @return String ログイン画面のパス
+	 * 
 	 */
 	@RequestMapping("/")
 	public String toLogin() {
