@@ -42,6 +42,13 @@ public class EmployeeController {
 		return "employee/list.html";
 	}
 
+	/**
+	 * 従業員詳細を表示.
+	 * 
+	 * @param id 従業員ID
+	 * @param model リクエストスコープを使うためのオブジェクト
+	 * @return 従業員詳細表示ページ
+	 */
 	@RequestMapping("/showDetail")
 	public String showDetail(String id, Model model) {
 		model.addAttribute("employee",  employeeService.showDetail(Integer.parseInt(id)));
