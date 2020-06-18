@@ -46,7 +46,6 @@ public class EmployeeController {
 	public String showDetail(String id, Model model) {
 		model.addAttribute("employee",  employeeService.showDetail(Integer.parseInt(id)));
 		return "employee/detail.html";
-		
 	}
 
 }

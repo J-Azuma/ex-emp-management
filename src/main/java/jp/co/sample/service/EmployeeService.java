@@ -3,6 +3,8 @@ package jp.co.sample.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +40,16 @@ public class EmployeeService {
 	 */
 	public Employee showDetail(Integer id) {
 		return employeeRepository.load(id);
+	}
+	
+	/**
+	 * 従業員情報を更新する.
+	 * 
+	 * @param employee 従業員
+	 */
+	public void update(Employee employee) {
+		employeeRepository.update(employee);
+				          
 	}
 	
 }
