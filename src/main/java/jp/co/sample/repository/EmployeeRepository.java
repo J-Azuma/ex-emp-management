@@ -69,12 +69,9 @@ public class EmployeeRepository {
 	 */
 	public void update(Employee employee) {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(employee);
-		String sql = "update employees set(name, image, gender, hire_date, mail_address, zip_code, address, telephone, salary, characteristics, dependents_count)"
-				   + " values(:name, :image, :gender, :hire_date, :mail_address, :zip_code, :address, :telephone, :salary, :characteristics, :dependents_count)"
-				   + "where id = :id;";
+		String sql = "update employees set"
+				   + " name=:name, image=:image, gender=:gender, hire_date=:hireDate, mail_address=:mailAddress, zip_code=:zipCode, address=:address, telephone=:telephone, salary=:salary, characteristics=:characteristics, dependents_count=:dependentsCount"
+				   + " where id = :id;";
 		template.update(sql, param);
-		
-		
-				     
 	}
 }
