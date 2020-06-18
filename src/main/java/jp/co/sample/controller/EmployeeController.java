@@ -54,5 +54,22 @@ public class EmployeeController {
 		model.addAttribute("employee",  employeeService.showDetail(Integer.parseInt(id)));
 		return "employee/detail.html";
 	}
+	
+	/**
+	 * 従業員情報を更新(ここではdependentsCountのみ).
+	 * 
+	 * @param form 従業員情報更新用のフォームオブジェクト
+	 * @return 従業員詳細表示ページへリダイレクト
+	 */
+	@RequestMapping("/update")
+	public String update(UpdateEmployeeForm form) {
+		//更新対象を取得
+		Employee employee = employeeService.showDetail(Integer.parseInt(form.getId()));
+		//更新対象のdependentsCountにリクエストパラメータの値をセット
+		employee.setDependentsCount(Integer.parseInt(form.getDependentsCount()));
+		//更新処理
+		employeeService.update(employee);
+		return "redirect:/employee/showList";
+	}
 
 }
